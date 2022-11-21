@@ -3,11 +3,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:match_people/pages/main/dashboard_page.dart';
 import 'package:provider/provider.dart';
-import '../../common/models/uni_provider.dart';
+import 'common/models/uni_provider.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import '../../common/services/firebase_options.dart';
-import 'boarding_page.dart';
+import 'common/services/firebase_options.dart';
+import 'pages/main/boarding_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,7 +43,9 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.dark,
             primarySwatch: Colors.green,
           ),
-          home: const BoardingPage(),
+          // home: const BoardingPage(),
+          // home: const DashboardPage(),
+          home: const DashboardPage(),
         );
       }
     );

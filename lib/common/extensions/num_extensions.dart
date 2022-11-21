@@ -2,7 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+extension DoubleX on int {
+  Widget get sizedBoxHeight => SizedBox(height: toDouble());
+  Widget get sizedBoxWidth => SizedBox(width: toDouble());
+}
+
 extension NumX on num {
+
   double get toRadian => (toDouble() * (pi / 180)).toDouble();
 
   Duration get microseconds => Duration(microseconds: toInt());

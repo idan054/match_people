@@ -12,14 +12,15 @@ Widget wMainTextField(
       String? topLabel,
       TextStyle? topLabelStyle,
       int? maxLength,
+      int? maxLines = 1,
       String? hintText,
     }) {
   return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+    crossAxisAlignment: CrossAxisAlignment.end,
     children: [
       if (topLabel != null)
         Text(topLabel, style: topLabelStyle ?? AppStyles.text16PxBold.white)
-            .pOnly(bottom: 5),
+            .pOnly(bottom: 10).rtl,
       TextField(
         autofocus: autofocus,
         maxLength: maxLength,
@@ -27,7 +28,8 @@ Widget wMainTextField(
         keyboardType: keyboardType,
         onChanged: onChanged,
         style: AppStyles.text20PxBold.white,
-        minLines: 1,
+        minLines: 2,
+        maxLines: maxLines,
         textAlign: TextAlign.center,
         cursorColor: AppColors.primary,
         decoration: InputDecoration(
